@@ -12,7 +12,11 @@ const Home = () => {
       dispatch(getFeedsAPI());
     }
   }, [dispatch]);
+let cart=[];
+const addtocart=(id)=>{
 
+  cart.push()
+}
   return (
     <div>
       <h1>Home</h1>
@@ -24,15 +28,20 @@ const Home = () => {
           <div
             key={feed.id}
             style={{
+              display:"grid",
+              gridTemplate:"1fr 1fr",
               padding: "10px",
               margin: "auto",
               marginTop: "10px",
               border: "1px solid grey",
-              maxWidth: "200px",
+              maxWidth: "400px",
             }}
           >
-            <div>{feed.title}</div>
-            <div>{feed.description}</div>
+            <div><img src={feed.thumbImg} alt=""/></div>
+            <div>{feed.description}</div> 
+            <div><h2>{feed.title}</h2></div>
+            <div>{feed.detail}</div>
+            <div><button onClick={addtocart}>Add to Cart</button></div>
           </div>
         ))}
     </div>

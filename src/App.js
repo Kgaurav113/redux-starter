@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
+import About from "./pages/About";
 import RequiredAuth from "./hoc/RequiredAuth";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
+        <Route path="/about" element={<About/>}></Route>
         <Route
           path="/"
           element={

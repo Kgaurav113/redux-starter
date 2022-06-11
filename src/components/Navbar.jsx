@@ -28,7 +28,9 @@ const Navbar = () => {
         }}
       >
         <Link data-cy="navbar-home-link" to="/">
-          Logo
+          Home
+        </Link><Link data-cy="navbar-home-link" to="/about">
+          About
         </Link>
       </div>
       <div
